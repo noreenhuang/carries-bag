@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body {
+			background-color: gray;
+			height: 90vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: white;
+		}
+
+	
+		img {
+			max-width: 100%;
+			height: auto;
+			margin: auto;
+			display: none;
+		}
+		.img-text {
+			position: absolute;
+			bottom: 2%;
+			left: 10%;
+			transform: translate(-50%, -50%);
+			font-size: 20px;
+			font-weight:50;
+			text-align: center;
+			color: rgb(248, 247, 247);
+			display: none;
+		}
+	</style>
+</head>
+<body onclick="toggleImage()">
+	<img src="Fontainebleau.png" alt="Hello World">
+	<p class="img-text">Fontainebleau</p>
+
+	<script>
+		function toggleImage() {
+			var body = document.querySelector('body');
+			var img = document.querySelector('img');
+			var imgText = document.querySelector('.img-text');
+			if (body.style.backgroundColor === 'white') {
+				body.style.backgroundColor = 'gray';
+				img.style.display = 'none';
+				imgText.style.display = 'none';
+			} else {
+				body.style.backgroundColor = 'white';
+				img.style.display = 'block';
+				imgText.style.display = 'block';
+			}
+		}
+	</script>
+Fontainebleau
+</body>
+</html>
